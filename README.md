@@ -1,2 +1,8 @@
 # training
-Team training
+
+- Spring Boot
+- MSA
+- Reactjs
+- OPA
+- JDA 
+- ...
