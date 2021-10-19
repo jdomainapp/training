@@ -24,15 +24,16 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-# old stuff
-bin/
+# eclipse stuff
+#bin/
 archives/
 classes/
 data/
 dist/
 build.xml
-/target
-/.settings/
-/.classpath
-/.project
+target/
+.settings/
+.metadata/
+.classpath
+.project
 #/lib/
