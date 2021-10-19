@@ -16,10 +16,13 @@
 5. compile again (to compile the generated code): 
 
     `mvn compile`
-6. run the backend (SpringBoot application):
+6. change `target/classes/logback.xml` to point to the correct logging folder:
+   - change the folder path prefix `/home/ducmle/` in the `<file>` tag to a folder on your hard disk (e.g. `/var/`)
+
+7. run the backend (SpringBoot application):
 
     `mvn exec:java@runbe`
-7. run the frontend (Reactjs):
+8. run the frontend (Reactjs):
    - create a project's folder from the provided template `dist/react-proj-template.zip`:
 
      `unzip $EXAMPLE.FOLDER/dist/react-proj-template.zip`
