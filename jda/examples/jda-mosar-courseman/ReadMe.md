@@ -1,5 +1,6 @@
 # CourseMan example for module-mosar
 
+## How to set up and run the CourseMan RFS example
 1. clone/pull latest version of the the training repository.
    - Suppose the cloned folder is: `~/jda-training/training`.
    - The folder that we focus on in this example:
