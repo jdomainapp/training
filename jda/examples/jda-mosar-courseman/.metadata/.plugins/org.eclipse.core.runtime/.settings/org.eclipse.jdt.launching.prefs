@@ -1,5 +1,0 @@
-eclipse.preferences.version=1
-org.eclipse.jdt.launching.PREF_CONNECT_TIMEOUT=20000
-org.eclipse.jdt.launching.PREF_DEFAULT_ENVIRONMENTS_XML=
-org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1615281505499">\n    <vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\n        <vm id\="1627548053694" name\="jre" path\="/opt/programs/eclipse-java-2021-06-R-linux-gtk-x86_64/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_16.0.1.v20210528-1205/jre"/>\n        <vm id\="1521967595611" name\="jdk-9.0.4" path\="/data/programs/java1.9"/>\n        <vm id\="1615281505499" name\="jdk-13.0.2" path\="/data/programs/java13"/>\n        <vm id\="1624071422220" name\="jdk-16.0.1" path\="/data/programs/java16"/>\n        <vm id\="1624071440421" name\="jdk1.8.020" path\="/data/programs/java1.8"/>\n    </vmType>\n</vmSettings>\n
-org.eclipse.jdt.launching.only_include_exported_classpath_entries=false
