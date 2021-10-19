@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="/data/programs/java16" version="16.0.1"/>
+    <libraryInfo home="/data/programs/java1.9" version="9.0.4"/>
+    <libraryInfo home="/data/programs/java1.8" version="1.8.0_20">
+        <bootpath>
+            <entry path="/data/programs/jdk1.8.020/jre/lib/resources.jar"/>
+            <entry path="/data/programs/jdk1.8.020/jre/lib/rt.jar"/>
+            <entry path="/data/programs/jdk1.8.020/jre/lib/sunrsasign.jar"/>
+            <entry path="/data/programs/jdk1.8.020/jre/lib/jsse.jar"/>
+            <entry path="/data/programs/jdk1.8.020/jre/lib/jce.jar"/>
+            <entry path="/data/programs/jdk1.8.020/jre/lib/charsets.jar"/>
+            <entry path="/data/programs/jdk1.8.020/jre/lib/jfr.jar"/>
+            <entry path="/data/programs/jdk1.8.020/jre/classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="/data/programs/jdk1.8.020/jre/lib/ext"/>
+            <entry path="/usr/java/packages/lib/ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="/data/programs/jdk1.8.020/jre/lib/endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="/opt/programs/eclipse-java-2021-06-R-linux-gtk-x86_64/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_16.0.1.v20210528-1205/jre" version="16.0.1"/>
+    <libraryInfo home="/data/programs/java13" version="13.0.2"/>
+</libraryInfos>
