@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+/data/workspace.standard/jda/test/.metadata/.plugins/org.eclipse.jdt.core
