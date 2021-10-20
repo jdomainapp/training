@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>jda.modules</groupId>
+  <artifactId>jda-sccl</artifactId>
+  <version>5.4-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20211020.082546</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20211020082546</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>5.4-20211020.082546-1</value>
+        <updated>20211020082546</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>5.4-20211020.082546-1</value>
+        <updated>20211020082546</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

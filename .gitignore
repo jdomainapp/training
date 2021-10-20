@@ -30,10 +30,11 @@ archives/
 classes/
 data/
 dist/
+lib/
+log/
 build.xml
 target/
 .settings/
 .metadata/
 .classpath
 .project
-#/lib/

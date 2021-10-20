@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jda.example</groupId>
+  <artifactId>jda-training-root</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+
+  <name>JDA Training Examples Root</name>
+  <description></description>
+
+  <properties>
+    <jda.version>5.4-SNAPSHOT</jda.version>  
+    <java.version>11</java.version>
+    <version.plugin.compiler>3.8.1</version.plugin.compiler>
+    <version.plugin.resources>3.2.0</version.plugin.resources>
+    <version.plugin.jar>3.2.0</version.plugin.jar>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- directories -->
+    <src.dir>${basedir}/src/main/java</src.dir>
+    <src.output.dir>${basedir}/target/classes</src.output.dir>
+    <test.src.dir>${basedir}/src/test/java</test.src.dir>
+    <test.output.dir>${basedir}/target/test-classes</test.output.dir>
+    <example.src.dir>${basedir}/src/example/java</example.src.dir>
+    <example.output.dir>${basedir}/target/example-classes</example.output.dir>
+    <image.dir>images</image.dir>
+    <src.root.dir>jda</src.root.dir>
+    <!-- used to get -DmainClass vm argument for the exec:java goal -->
+    <mainClass></mainClass>
+  </properties>
+
+  <repositories>
+    <!-- local repo for JDA's module jars and other unpublished jars. Use script bin/mvn-deploy-local.bash 
+      to install jar file to this repo -->
+    <repository>
+      <id>local-maven-repo</id>
+      <url>file://local-maven-repo</url>
+    </repository>
+  </repositories>
+
+  <modules>
+    <module>jda-eg-coursemanbasics</module>
+    <module>jda-mosar-courseman</module>
+  </modules>
+
+  <!-- build configuration -->
+  <build>
+    <!-- <sourceDirectory>src</sourceDirectory> -->
+    <pluginManagement>
+      <plugins>
+        <!-- plugin: compiler -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${version.plugin.compiler}</version>
+          <configuration>
+            <source>${java.version}</source>
+            <target>${java.version}</target>
+            <release>${java.version}</release>
+            <testSource>${java.version}</testSource>
+            <testTarget>${java.version}</testTarget>
+            <compilerArgs>
+              <!-- <arg>-Xlint:unchecked</arg> -->
+              <!-- https://issues.apache.org/jira/browse/MCOMPILER-368 -->
+              <arg>-Xpkginfo:always</arg>
+            </compilerArgs>
+          </configuration>
+        </plugin>
+        <!-- for source code execution (exec:java) -->
+       <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+          <execution>
+            <id>run</id>
+            <configuration>
+              <cleanupDaemonThreads>true</cleanupDaemonThreads>
+              <mainClass>${mainClass}</mainClass>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>   
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <dependencies>
+    <!-- DERBY: embedded DB -->
+    <dependency>
+      <groupId>org.apache.derby</groupId>
+      <artifactId>derby</artifactId>
+      <version>10.15.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.derby</groupId>
+      <artifactId>derbyclient</artifactId>
+      <version>10.15.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.derby</groupId>
+      <artifactId>derbynet</artifactId>
+      <version>10.15.2.0</version>
+    </dependency>
+    <!-- POSTGRESQL -->
+    <dependency>
+      <groupId>postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>9.1-901-1.jdbc4</version>
+    </dependency>
+    <!-- JUNIT -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+    </dependency>
+    <!-- Logging -->
+    <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.3.0-alpha10</version>
+    </dependency>
+    <!-- END: logging -->
+    
+    <!-- IN-MEMORY JAVA COMPILER: required to generate and run software -->
+    <dependency>
+        <groupId>org.mdkt.compiler</groupId>
+        <artifactId>InMemoryJavaCompiler</artifactId>
+        <version>1.3.0</version>
+    </dependency>
+    <!-- END: IN-MEMORY JAVA COMPILER -->
+    
+    <!-- JSON: required by jda-common -->
+    <!-- https://mvnrepository.com/artifact/javax.json/javax.json-api -->
+    <dependency>
+        <groupId>javax.json</groupId>
+        <artifactId>javax.json-api</artifactId>
+        <version>1.1.4</version>
+    </dependency>  
+    <!-- https://mvnrepository.com/artifact/org.glassfish/javax.json -->
+    <dependency>
+        <groupId>org.glassfish</groupId>
+        <artifactId>javax.json</artifactId>
+        <version>1.1.4</version>
+    </dependency>
+    <!-- END: JSON -->
+    
+    <!-- local-maven-repo: JSCALEDHTMLTEXTPANE -->
+    <dependency>
+      <groupId>jscaledhtmltextpane</groupId>
+      <artifactId>jscaledhtmltextpane</artifactId>
+      <version>unknown</version>
+    </dependency>
+    <!-- local-maven-repo: SCROLALBLEDESKTOP -->
+    <dependency>
+      <groupId>scrollabledesktop</groupId>
+      <artifactId>scrollabledesktop</artifactId>
+      <version>unknown</version>
+    </dependency>
+      
+    <!-- JDA -->
+	  <dependency>
+        <groupId>jda</groupId>
+        <artifactId>jda-main</artifactId>
+        <version>${jda.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>jda</groupId>
+        <artifactId>jda-dcsl</artifactId>
+        <version>${jda.version}</version>
+    </dependency>
+	  <dependency>
+        <groupId>jda</groupId>
+        <artifactId>jda-common</artifactId>
+        <version>${jda.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>jda.modules</groupId>
+        <artifactId>jda-dompattern</artifactId>
+        <version>${jda.version}</version>
+    </dependency>      
+    <!-- END: JDA -->	
+  </dependencies>
+</project>

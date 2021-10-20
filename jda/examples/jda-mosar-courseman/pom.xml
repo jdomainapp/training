@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>jda.example</groupId>
   <artifactId>jda-mosar-courseman</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0</version>
   
    <!-- SPRING PARENT POM -->
     <parent>
@@ -276,7 +276,7 @@
         <version>1.1.4</version>
     </dependency>
     
-	<!-- DOMAINAPP -->
+	<!-- JDA -->
 	  <dependency>
           <groupId>jda</groupId>
           <artifactId>jda-main</artifactId>
@@ -327,7 +327,7 @@
           <artifactId>jda-dompattern</artifactId>
           <version>${jda.version}</version>
       </dependency>      
-      <!-- END: DOMAINAPP -->	
+      <!-- END: JDA -->	
   </dependencies>
     
 </project>
