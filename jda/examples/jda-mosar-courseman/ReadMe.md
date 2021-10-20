@@ -3,7 +3,7 @@
 ## How to set up and run the CourseMan RFS example
 1. clone/pull latest version of the the training repository.
    - Suppose the cloned folder is: `~/jda-training/training`.
-   - The folder that we focus on in this example:
+   - The **Maven project** of the example:
       `EXAMPLE.FOLDER` = `~/jda-training/training/jda/examples/jda-mosar-courseman`
 
 2. cd into `$EXAMPLE.FOLDER`
@@ -39,3 +39,14 @@
 
        `PORT=5000 npm run start`
 
+Figure below shows the CourseMan frontend:
+![RESTful CourseMan example](https://github.com/jdomainapp/jda/blob/main/modules/mosar/docs/images/FrontEnd-CourseMan.png)
+
+## Study the example
+1. Import the Maven project into your IDE
+2. Study the frontend
+   - package `org.jda.example.mosar.courseman.frontend`
+   - use the [Reactjs resources]((https://github.com/jdomainapp/training/issues/3)
+3. Study the backend
+   - package `org.jda.example.mosar.courseman.backend`
+   - use the [Spring Boot's resources](https://github.com/jdomainapp/training/issues/2)
