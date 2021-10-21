@@ -12,8 +12,8 @@
 
    `mvn exec:java@genrfs`
 
-   - frontend source: `src/main/java/org/jda/example/mosar/courseman/frontend`
-   - backend source: `src/main/java/org/jda/example/mosar/courseman/backend`
+   - frontend source: `src/main/java/org/jda/example/coursemanrestful/frontend`
+   - backend source: `src/main/java/org/jda/example/coursemanrestful/backend`
 5. compile again (to compile the generated code): 
 
     `mvn compile`
@@ -28,7 +28,7 @@
 
    - copy the generated frontend source to the project's `src` folder. Assume you have `cd`ed into the project's folder:
 
-     `cp -r $EXAMPLE.FOLDER/src/main/java/org/jda/example/mosar/courseman/frontend/* src/`
+     `cp -r $EXAMPLE.FOLDER/src/main/java/org/jda/example/coursemanrestful/frontend/* src/`
     
    - from the project's folder:
      - install dependencies (only needs to do this once; takes a few minutes!):
@@ -40,13 +40,14 @@
        `PORT=5000 npm run start`
 
 Figure below shows the CourseMan frontend:
+
 ![RESTful CourseMan example](https://github.com/jdomainapp/jda/blob/main/modules/mosar/docs/images/FrontEnd-CourseMan.png)
 
 ## Study the example
 1. Import the Maven project into your IDE
 2. Study the frontend
-   - package `org.jda.example.mosar.courseman.frontend`
+   - package `org.jda.example.coursemanrestful.frontend`
    - use the [Reactjs resources]((https://github.com/jdomainapp/training/issues/3)
 3. Study the backend
-   - package `org.jda.example.mosar.courseman.backend`
+   - package `org.jda.example.coursemanrestful.backend`
    - use the [Spring Boot's resources](https://github.com/jdomainapp/training/issues/2)
