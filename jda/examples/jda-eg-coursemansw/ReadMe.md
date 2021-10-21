@@ -31,9 +31,8 @@ Open 2 console terminals with the current dir set to `proj.folder`.
 3. (Terminal 1) Choose 'C' to generate software configuration
 4. (Terminal 2) compile the source code: `mvn compile` (to compile the generated code)
 5. (Terminal 1) Choose 'S' to generate the software class
-6. (Terminal 1) Choose 'X' to end
-7. (Terminal 1) Run the software (again): `mvn exec:java@run`
-8. (Terminal 1) Choose 'R' to run the software
+6. Repeat step 4 to compile the generated code
+7. (Terminal 1) Choose 'R' to run the software
      
 ## Study the example
 1. Open the modules packages and study the generated MCCs
