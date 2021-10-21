@@ -17,6 +17,16 @@ mvnDeploy() {
   arrPath=(${jarName//-/ })
   artifactId=${arrPath[0]}-${arrPath[1]}
   
+  mvnDeployFile $groupId, $artifactId, $version, $jarFilePath
+}
+
+# function: 3 parameters
+mvnDeployFile() {
+  groupId=$1      # param 1
+  artifactId=$2      # param 1
+  version=$3      # param 2
+  jarFilePath=$4  # param 3
+  
   echo "Deploying $artifactId ($jarFilePath) to local-maven-rep..." 
   mvn deploy:deploy-file \
     -DgroupId=$groupId \
@@ -41,7 +51,7 @@ do
 done
 
 # deploy other libs
-mvnDeploy "jscaledhtmltextpane" "unknown" lib/jscaledhtmltextpane.jar
-mvnDeploy "scrollabledesktop" "unknown" lib/scrollabledesktop.jar
+mvnDeployFile "jscaledhtmltextpane" "jscaledhtmltextpane" "unknown" lib/jscaledhtmltextpane.jar
+mvnDeployFile "scrollabledesktop" "scrollabledesktop" "unknown" lib/scrollabledesktop.jar
 
 echo "...done"
