@@ -40,4 +40,8 @@ do
   mvnDeploy "jda.modules" $version $jarFilePath
 done
 
+# deploy other libs
+mvnDeploy "jscaledhtmltextpane" "unknown" lib/jscaledhtmltextpane.jar
+mvnDeploy "scrollabledesktop" "unknown" lib/scrollabledesktop.jar
+
 echo "...done"
