@@ -43,6 +43,7 @@
 
   <modules>
     <module>jda-eg-coursemanbasics</module>
+    <module>jda-eg-coursemansw</module>
     <module>jda-mosar-courseman</module>
   </modules>
 
@@ -163,7 +164,7 @@
     </dependency>
       
     <!-- JDA -->
-	  <dependency>
+    <dependency>
         <groupId>jda</groupId>
         <artifactId>jda-main</artifactId>
         <version>${jda.version}</version>
