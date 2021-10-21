@@ -38,13 +38,13 @@ import jda.modules.setup.model.SetUpConfig;
       feProjPath = "/home/ducmle/tmp/restfstool-fe",
       feProjName = "fe-courseman",
       feProjResource = "src/main/resources/react",
-      feOutputPath = "src/main/java/org/jda/example/mosar/courseman/frontend",
+      feOutputPath = "src/main/java/org/jda/example/coursemanrestful/frontend",
       feServerPort = 5000,  // default: 3000
       feAppClass=FEReactApp.class,
       feThreaded = true,
-      bePackage = "org.jda.example.mosar.courseman.modules",
+      bePackage = "org.jda.example.coursemanrestful.modules",
       beOutputPath = "src/main/java", 
-      beTargetPackage = "org.jda.example.mosar.courseman.backend"
+      beTargetPackage = "org.jda.example.coursemanrestful.backend"
       ,beAppClass = BESpringApp.class,
       beServerPort = 8080  // default: 8080
 )

@@ -29,8 +29,8 @@
         <jersey.version>3.0.1</jersey.version>
         <!--    <jetty.version>11.0.1</jetty.version>-->
         <jetty.version>9.4.38.v20210224</jetty.version>
-		<mainClassGen>org.jda.example.mosar.courseman.software.CourseManRFSGen</mainClassGen>
-		<mainClassRunBE>org.jda.example.mosar.courseman.software.CourseManRFSRunBE</mainClassRunBE>
+		<mainClassGen>org.jda.example.coursemanrestful.software.CourseManRFSGen</mainClassGen>
+		<mainClassRunBE>org.jda.example.coursemanrestful.software.CourseManRFSRunBE</mainClassRunBE>
     </properties>
     <!-- END: PROPERTIES -->
 
