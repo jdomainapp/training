@@ -17,10 +17,10 @@ mvnDeploy() {
   arrPath=(${jarName//-/ })
   artifactId=${arrPath[0]}-${arrPath[1]}
   
-  mvnDeployFile $groupId, $artifactId, $version, $jarFilePath
+  mvnDeployFile $groupId $artifactId $version $jarFilePath
 }
 
-# function: 3 parameters
+# function: 4 parameters
 mvnDeployFile() {
   groupId=$1      # param 1
   artifactId=$2      # param 1
