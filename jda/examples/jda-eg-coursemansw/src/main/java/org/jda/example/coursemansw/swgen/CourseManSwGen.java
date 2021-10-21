@@ -1,5 +1,6 @@
 package org.jda.example.coursemansw.swgen;
 
+import java.io.File;
 import java.util.Scanner;
 
 import javax.json.JsonObject;
@@ -86,14 +87,19 @@ public class CourseManSwGen {
   public CourseManSwGen(JsonObject swConfigGen) {
     this.swConfigGen = swConfigGen;
     String domain = swConfigGen.getString("domain");
+    String rootPath = swConfigGen.getString("rootPath");
+    if (!rootPath.endsWith(File.separator))
+      rootPath += File.separator;
     
+    String rootSrcPath = rootPath + swConfigGen.getString("rootSrcPath");
+    String outputPath = rootPath + swConfigGen.getString("outputPath");
+
     swgen = new SwGen(domain,
         swConfigGen.getString("modelPkgName"),
         // root source path
-        swConfigGen.getString("rootSrcPath"),
+        rootSrcPath,
         // outputPath
-        swConfigGen.getString("outputPath"),
-        // seed domain model package
+        outputPath,
         swConfigGen.getString("modulesPkg"),
         swConfigGen.getString("softwarePkg"),
         swConfigGen.getBoolean("includesSubTypes", true),
