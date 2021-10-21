@@ -4,7 +4,7 @@
 1. clone/pull latest version of the the training repository.
    - Suppose the cloned folder is: `~/jda-training/training`.
    - The **Maven project** of the example:
-      `EXAMPLE.FOLDER` = `~/jda-training/training/jda/examples/jda-mosar-courseman`
+      `EXAMPLE.FOLDER` = `~/jda-training/training/jda/examples/jda-eg-coursemanrestful`
 
 2. cd into `$EXAMPLE.FOLDER`
 3. compile source code: `mvn clean install`
