@@ -44,7 +44,7 @@
   <modules>
     <module>jda-eg-coursemanbasics</module>
     <module>jda-eg-coursemansw</module>
-    <module>jda-mosar-courseman</module>
+    <module>jda-eg-coursemanrestful</module>
   </modules>
 
   <!-- build configuration -->
