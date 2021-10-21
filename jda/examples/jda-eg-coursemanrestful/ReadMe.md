@@ -1,6 +1,6 @@
-# CourseMan example for module `jda-mosar`
+# RESTful CourseMan example
 
-## How to set up and run the CourseMan RFS example
+## How to set up and run the example
 1. clone/pull latest version of the the training repository.
    - Suppose the cloned folder is: `~/jda-training/training`.
    - The **Maven project** of the example:
