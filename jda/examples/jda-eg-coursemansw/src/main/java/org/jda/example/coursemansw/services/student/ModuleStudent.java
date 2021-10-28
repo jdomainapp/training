@@ -22,10 +22,10 @@ public class ModuleStudent {
     @AttributeDesc(label = "Student")
     private String title;
 
-    @AttributeDesc(label = "id")
+    @AttributeDesc(label = "Mã SV")
     private String id;
 
-    @AttributeDesc(label = "name")
+    @AttributeDesc(label = "Họ và tên")
     private String name;
 
     @AttributeDesc(label = "gender")
