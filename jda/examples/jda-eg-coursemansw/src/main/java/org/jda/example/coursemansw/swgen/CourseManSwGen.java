@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 import jda.modules.common.exceptions.NotPossibleException;
 import jda.modules.common.io.ToolkitIO;
 import jda.modules.sccl.conceptualmodel.SCC;
-import jda.modules.sccl.util.SCCTk;
 import jda.modules.swtool.SwGen;
 
 /**
