@@ -9,6 +9,7 @@
    - the config file: `config.file` = `${proj.folder}/src/main/resources/swgenconfig.json`
 2. Configure the root path:
   - change property `rootPath` in the `${config.file}` to the `${root.path}`
+  - Note: if you are using Windows, the path must include the double backward-slash `\\` as the path separator!
 3. Install PostgreSQL RDBMS
    1. create database: `coursemands`
    2. database admin account: user = `'user'`, password = `'password'`
