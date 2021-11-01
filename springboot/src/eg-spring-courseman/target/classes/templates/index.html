@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Manager Course Man</title>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="swapper">
+    <div class="banner">
+        <!--/*@thymesVar id="HI" type="java"*/-->
+        <h1 th:text="${HI}"></h1>
+        <b> Manage course man Modules: Sclass, Course, Student, Enrolment</b>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="/">Homepage</a> </li>
+            <li><a href="/sclass">Sclass</a> </li>
+            <li><a href="/course">Course</a> </li>
+            <li><a href="/student">Student</a> </li>
+            <li><a href="/enrolment">Enrolment</a> </li>
+
+        </ul>
+
+    </div>
+    <div class="content">
+
+    </div>
+    <div class="footer">
+        <img th:src="@{/image/springboot1.PNG}">
+    </div>
+</div>
+</body>
+</html>

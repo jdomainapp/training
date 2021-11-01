@@ -1,0 +1,80 @@
+package com.courseman.egspringcourseman.repository;
+
+import com.courseman.egspringcourseman.model.Sclass;
+import com.courseman.egspringcourseman.service.SclassService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class SclassServiceIml implements SclassService {
+    @Autowired
+    SclassRepository repository;
+    @Override
+    public Sclass save(Sclass entity) {
+        return repository.save(entity);
+    }
+
+    @Override
+    public List<Sclass> saveAll(List<Sclass> entities) {
+
+        return (List<Sclass>) repository.saveAll(entities);
+    }
+
+    @Override
+    public Optional<Sclass> findById(Integer integer) {
+        return repository.findById(integer);
+    }
+
+    @Override
+    public boolean existsById(Integer integer) {
+        return repository.existsById(integer);
+    }
+
+    @Override
+    public List<Sclass> findAll() {
+        return (List<Sclass>) repository.findAll();
+    }
+
+    @Override
+    public List<Sclass> findAllById(List<Integer> integers) {
+        return (List<Sclass>) repository.findAllById(integers);
+    }
+
+    @Override
+    public long count() {
+        return repository.count();
+    }
+
+    @Override
+    public void deleteById(Integer integer) {
+        repository.deleteById(integer);
+    }
+
+    @Override
+    public void delete(Sclass entity) {
+        repository.delete(entity);
+    }
+
+    @Override
+    public void deleteAllById(List<Integer> integers) {
+        repository.deleteAllById(integers);
+    }
+
+    @Override
+    public void deleteAll(List<Sclass> entities) {
+        repository.deleteAll(entities);
+    }
+
+    @Override
+    public void deleteAll() {
+        repository.deleteAll();
+    }
+
+    @Override
+    public List<Sclass> findByNamesclassContaining(String q) {
+        return repository.findByNamesclassContaining(q);
+    }
+}
