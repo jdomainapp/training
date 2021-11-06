@@ -1,4 +1,4 @@
-#Running example Spring boot CourseMan
+# Running example Spring boot CourseMan
 1. Create Database in MySQL: **db_eg_spring_courseman**
 2. Running in IDE 
 3. Use Browser: *http://localhost:8080*
