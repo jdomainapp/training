@@ -94,18 +94,18 @@
 		This.desc=desc;
 	}```
 **- create a class in repository: SclassRepository (format: interface)**
-@Repository
-public interface SclassRepository extends JpaRepository<Sclass,Long> {
-}
+```@Repository
+public interface SclassRepository extends JpaRepository\<Sclass,Long\> {
+}```
 **- create a class in service: ISclassService (format: interface)**
-public interface ISclassService{
+```public interface ISclassService{
 	public Sclass addSclass(Sclass sclass);
 	public Sclass updSclass(long id,Sclass sclass);
 	public  boolean delSclass(long id);
-	public List/<Sclass/> getallSclass();
-	public Sclass getoneSclass(long id);}
+	public List\<Sclass\> getallSclass();
+	public Sclass getoneSclass(long id);}```
 **create a class in service: SclassServiceIml (format: class)**
-@Service
+```@Service
 public class SclassServiceImpl implements ISclassService{
     @Autowired
     private SclassRepository sclassRepository;
@@ -143,7 +143,7 @@ public class SclassServiceImpl implements ISclassService{
     }
 
     @Override
-    public List/<Sclass/> getallSclass() {
+    public List\<Sclass\> getallSclass() {
 
         return sclassRepository.findAll();
     }
@@ -161,9 +161,9 @@ public class SclassServiceImpl implements ISclassService{
         }
         return sclassRepository.getById(id);
     }
-}
+}```
 **- create a class in controller: SclassController (format: class)**
- @Controller
+```@Controller
 public class CourseController {
     @Autowired
     private CourseService service;
@@ -207,7 +207,7 @@ public class CourseController {
   model.addAttribute("SUBJECT", service.findById(id));
   return "course/index";
   }
-  }
+  }```
 # Design View:
   (D:\Temp\Springboot\eg-spring-courseman\src\main\resources\static\image\readme1.PNG)
 ## Lưu ý: Sử dụng kết hợp với Thymeleaf Engine:
