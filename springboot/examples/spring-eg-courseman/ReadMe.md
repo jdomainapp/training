@@ -1,21 +1,21 @@
 # Running example Spring boot CourseMan
-1. Create Database in MySQL: **db_eg_spring_courseman
+1. Create Database in MySQL: **db_eg_spring_courseman**
 2. Running in IDE 
-3. Use Browser: * http://localhost:8080
+3. Use Browser: *http://localhost:8080
 4. Login:
-   Username: ** courseman
-   Password=**123456**
+   Username: **courseman**
+   Password= **123456 **
 # --- SPRINGBOOT---
-* Repair:
-	** JDK 11 or new
-	** Maven 3.6
-	** IntelliJ IDEA
+*Repair: *
+	**JDK 11 or new
+	  Maven 3.6
+	  IntelliJ IDEA
 		Spring Tool Suite (STS)
-		Postman
-* 1. Getting Started:**
+		Postman **
+## 1. Getting Started:
     Hello SpringBoot!
     Spring Quickstart Guide: Spring | Spring Quickstart Guide
-* (1) Create project Demo:* **Spring Initializr**
+*(1) Create project Demo:*** Spring Initializr **
     Note: Project: Maven Project
         Language: Java
         Spirng Boot: 2.5.5
@@ -25,28 +25,29 @@
             Name: demo
         Dependencies: Spring Web (add dependencies …)
         GENERATE
-*(2) Add code file:* DemoApplication.java In src/main/java/com/example/demo
-*(3) Run:
+*(2) Add code file:* __DemoApplication.java In src/main/java/com/example/demo__
+*(3) Run:*
     Terminal:  mvnw spring-boot:run
-    Browser: localhost:8080/hello
-** 2. Project CourseMan**
+    Browser: localhost:8080/hello*
+    ___
+## 2. Project CourseMan
     Management: Sclass(Id, Name, Desc)
     - Insert, update, delete, select (all, one): MVC
-* (1) Create new project:* CourseMan
+*(1) Create new project: **CourseMan **
  
-Dependencies:
+**Dependencies:**
 	Spring Web
 	Spring Data JPA
 	H2 Database
-    thymeleaf
-    MySQL Database
-*(2) Create: Packet in:* CourseMan/src/main/java/com.project.courseman
+        thymeleaf
+        MySQL Database
+*(2) Create: Packet in:* __CourseMan/src/main/java/com.project.courseman__
 	controller
 	model
 	repository //connect to database
 	service //method to work with database
-*(3) configuration project:* File application.properties
-	' spring.datasource.url=jdbc:mysql://localhost:3306/db_eg_spring_courseman
+*(3) configuration project:* __File application.properties__
+	```spring.datasource.url=jdbc:mysql://localhost:3306/db_eg_spring_courseman
         spring.datasource.username=root
         spring.datasource.password=12345
         spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
@@ -54,13 +55,12 @@ Dependencies:
         spring.jpa.hibernate.ddl-auto = update
         logging.level.org.hibernate = ERROR
         spring.security.user.name=courseman
-        spring.security.user.password=123456 '
-* (4) code:
-	** - create a class in model: Sclass (format: class)
-	' Annotation:
-	@Entity
+        spring.security.user.password=123456```
+*(4) code:*
+	**- create a class in model: Sclass (format: class)**
+	```@Entity
 	@Table(name="sclass")
-Public class Sclass{
+       Public class Sclass{
 	@id
 	@generatedValue(strategy=GenerationType, IDENTITIY)
 	Private long id;
@@ -92,26 +92,20 @@ Public class Sclass{
 	}
 	Public void  setDesc(string desc){
 		This.desc=desc;
-	} '
-** - create a class in repository: SclassRepository (format: interface)
-' @Repository
+	}```
+**- create a class in repository: SclassRepository (format: interface)**
+@Repository
 public interface SclassRepository extends JpaRepository<Sclass,Long> {
 }
-- create a class in service: ISclassService (format: interface)
-public interface ISclassService {
-    //insert: add
-    public Sclass addSclass(Sclass sclass);
-    //update
-    public Sclass updSclass(long id,Sclass sclass);
-    //delete
-    public  boolean delSclass(long id);
-    //select all
-    public List<Sclass> getallSclass();
-    //select one
-    public Sclass getoneSclass(long id);
-} '
-** - create a class in service: SclassServiceIml (format: class)
-' @Service
+**- create a class in service: ISclassService (format: interface)**
+public interface ISclassService{
+	public Sclass addSclass(Sclass sclass);
+	public Sclass updSclass(long id,Sclass sclass);
+	public  boolean delSclass(long id);
+	public List/<Sclass/> getallSclass();
+	public Sclass getoneSclass(long id);}
+**create a class in service: SclassServiceIml (format: class)**
+@Service
 public class SclassServiceImpl implements ISclassService{
     @Autowired
     private SclassRepository sclassRepository;
@@ -149,7 +143,7 @@ public class SclassServiceImpl implements ISclassService{
     }
 
     @Override
-    public List<Sclass> getallSclass() {
+    public List/<Sclass/> getallSclass() {
 
         return sclassRepository.findAll();
     }
@@ -163,14 +157,13 @@ public class SclassServiceImpl implements ISclassService{
             {
                 sclass1.getName();
                 sclass1.getDesc();
-
             }
         }
         return sclassRepository.getById(id);
     }
-} '
-** - create a class in controller: SclassController (format: class)**
-' @Controller
+}
+**- create a class in controller: SclassController (format: class)**
+ @Controller
 public class CourseController {
     @Autowired
     private CourseService service;
@@ -214,9 +207,9 @@ public class CourseController {
   model.addAttribute("SUBJECT", service.findById(id));
   return "course/index";
   }
-  } '
-** Design View:
-  ![](D:\Temp\Springboot\eg-spring-courseman\src\main\resources\static\image\readme1.PNG)
+  }
+# Design View:
+  (D:\Temp\Springboot\eg-spring-courseman\src\main\resources\static\image\readme1.PNG)
 ## Lưu ý: Sử dụng kết hợp với Thymeleaf Engine:
 	+ Biểu thức biến: $ {...}
 	+ Lựa chọn biểu thức biến: * {...}
